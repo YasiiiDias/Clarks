@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Poppins&family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Poppins&family=Yanone+Kaffeesatz:wght@300;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    background-color: whitesmoke;
+}
+
+.parallex{
+    background-image: url(images/image2.jpg);
+    min-height:600px;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+header{
+    display:flex;
+    background-color:whitesmoke;
+    justify-content: space-around;
+    padding:1.3rem 0;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items: center;
+}
+
+.logo img{
+    width:70%;
+    margin-right:10px;
+}
+
+
+.nav-list{
+    display:flex;
+    align-items:center;
+}
+
+.nav-item{
+    margin:0 20px;
+}
+
+#fav-btn{
+    margin-right:-120px;
+    margin-left:120px;
+    font-size:25px;
+}
+
+#fav-btn a{
+    color:black;
+}
+
+#fav-btn a:hover{
+    color:darksalmon;
+    transition:all 0.4s;
+}
+
+
+
+.nav-link{
+    padding:10px;
+    color:rgba(32, 31, 31, 0.933);
+    font-size:1rem;
+    font-weight:600px;
+    border-radius:5px;
+    font-weight:200; 
+}
+
+
+.nav-link:hover{
+    background-color:rgb(226, 124, 89);
+    transition: 0.5s all;
+    color:white;
+}
+
+.search-container{
+    width:85%;
+    max-width:600px;
+    position:absolute;
+    background:rgb(19, 18, 18);
+    top:57%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:30px 40px;
+    border-radius:10px;
+    box-sizing:border-box;
+    text-align:center;
+    
+}
+
+.search-container h1{
+    color:rgb(226, 225, 225);
+    font-family:'Yanone Kaffeesatz', sans-serif ;
+    margin-bottom:20px;
+    font-size:45px;
+}
+
+.search-container label{
+    color:white;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    margin-right:30px;
+    
+}
+
+
+
+.search-container #Search{
+    padding:10px 50px;
+    margin-left:1.6rem;
+    display:inline-block;
+    font-family:'Yanone Kaffeesatz', sans-serif;
+    font-weight: 550;
+    background-color:rgb(226, 124, 89);
+    border-color:rgb(226, 124, 89) ;
+    border-radius:30px;
+    font-size:25px;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+}
+
+.search-container img{
+    margin-bottom:-15px;
+    height:80%;
+}
+
+#slider-range{
+    width:60%;
+    margin-left:20%;
+    background-image: linear-gradient(to left,  #E3BE19, #FF5403); 
+    
+}
+
+.search-heading{
+    text-align:center;
+    font-size:60px;
+    text-transform: uppercase;
+    font-family:'Yanone Kaffeesatz', sans-serif;
+    margin-top:40px;
+    color:rgb(70, 70, 70);
+}
+
+.shoe-container{
+    margin-left:30%;
+    margin-top:-20%;
+ }
+ 
+.shoe-name{
+    font-size:35px;
+}
+
+.shoe-price{
+   margin-top:10px;
+}
+
+.view-more-btn{
+    margin-top:20px;
+    padding:10px 50px;
+    background-color:rgb(226, 124, 89);
+    border-color:rgb(226, 124, 89);
+}
+
+.view-more-btn a{
+    color:white;
+    font-family:'Poppins', sans-serif;
+}
+
+.fav-btn{
+    margin-top:20px;
+    padding:10px 40px;
+    margin-left:10px;
+    background-color:rgb(226, 124, 89) ;
+    border-color:rgb(226, 124, 89);
+}
+
+.fav-btn a{
+    color:white;
+    font-family:'Poppins', sans-serif;
+}
+
+@media(max-width:600px){
+    
+    #fav-btn{
+        margin-left:90px;
+        margin-right:-10px;
+    }
+
+    
+    .search-container{
+        margin-top:50px;
+        
+    }
+
+
+}
+
+@media(min-width:600px) {
+    #fav-btn{
+        margin-right:-120px;
+        margin-left:120px;
+    }
+
+    .search-container{
+        margin-top:20px;
+        margin-right:60px;   
+    }
+
+
+}
+
+@media(max-width:600px){
+    
+    img{
+        margin-left:68px;
+    }
+
+}
+
+@media(max-width:600px){
+    
+    .shoe-container{
+        font-size:18px;
+        margin-top: 20px;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+}
+
+  

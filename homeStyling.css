@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Poppins&family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Poppins&family=Yanone+Kaffeesatz:wght@300;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    background-color: whitesmoke;
+}
+
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+header{
+    display:flex;
+    background-color:whitesmoke;
+    justify-content: space-around;
+    padding:1.3rem 0;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items: center;
+}
+
+.logo img{
+    width:70%;
+    margin-right:10px;
+}
+
+
+.nav-list{
+    display:flex;
+    align-items:center;
+}
+
+.nav-item{
+    margin:0 20px;
+}
+
+.nav-link{
+    padding:10px;
+    color:rgba(32, 31, 31, 0.933);
+    font-size:1rem;
+    font-weight:600px;
+    border-radius:5px;
+    font-weight:200; 
+}
+
+
+.nav-link:hover{
+    background-color:rgb(226, 124, 89);
+    transition: 0.5s all;
+    color:white;
+}
+
+#fav-btn{
+    margin-right:-120px;
+    margin-left:120px;
+    font-size:25px;
+}
+
+#fav-btn a{
+    color:black;
+}
+
+#fav-btn a:hover{
+    color:darksalmon;
+    transition:all 0.4s;
+}
+
+
+
+.container{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.container1 img{
+    position:absolute;
+    margin-left:-170px;
+    top:-10%;
+    left:0;
+    object-fit:contain;
+}
+
+.container img{
+    position:absolute;
+    width:60%;
+    height:60%;
+    top:20%;
+    left:55%;
+    object-fit: contain;
+}
+
+.container3 img{
+    position:absolute;
+    width:50%;
+    height:50%;
+    top:55%;
+    left:-10%;
+    object-fit:contain;
+}
+
+
+ 
+
+h1{
+    font-size:27vw;
+    font-family:'Yanone Kaffeesatz', sans-serif ;
+    margin-top: 9%;
+    text-align: center;
+    font-weight:900;
+    background-image: url(images/image1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-bottom:170px;
+    background-clip:text;
+    -webkit-background-clip: text;
+    color:transparent;
+    opacity:0.9;
+   
+}
+
+
+@media(max-width:600px){
+    
+    #fav-btn{
+        margin-left:90px;
+        margin-right:-10px;
+    }
+}
+
+
+@media(min-width:600px) {
+    #fav-btn{
+        margin-right:-120px;
+        margin-left:120px;
+    }
+}
+
+@media(max-width:992px){
+    #fav-btn{
+        margin-right:-50px;
+        margin-left:70px;
+    }
+}
+
+@media(min-width:992px){
+    #fav-btn{
+        margin-right:-90px;
+        margin-left:10px;
+    }
+}
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+

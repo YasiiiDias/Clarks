@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/a90f419642.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+   
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <nav class="nav" id="nav-menu">
+
+            <ul class="nav-list">
+                <li class="nav-item"><a href="homepage.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="search.html" class="nav-link">SEARCH</a></li>
+                <li class="nav-item" id="fav-btn"><a href="favourites.html"><i class="far fa-heart"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="parallex">
+        <div class="search-container">
+
+            <h1><img src="images/logo-white.png" alt="logo"> SEARCH</h1>
+            
+            <label>Gender</label>
+            <select name="gender" id="gender">
+                <option value="Women">Women</option>
+                <option value="Men">Men</option>
+                <option value="All">All</option>
+               
+               </select>
+                <br><br>
+
+            <label>Style</label>
+            <select name="style" id="style">
+                <option value="Any" selected>Any</option>
+                <option value="Flats">Flats</option>
+                <option value="Boots">Boots</option>
+                <option value="Trouser Shoes">Trouser Shoes</option>
+                <option value="Slippers">Slippers</option>
+                <option value="Heels">Heels</option>
+                <option value="Sandals">Sandals</option>
+                <option value="Derby Shoes">Derby Shoes</option>
+            </select>
+                <br><br>
+
+            <label>Size</label>
+                 <input id="spinner" value="3"> 
+                <br><br>
+
+            <p class="box"> 
+            <label>Price Range</label> 
+                 <input type="text" id="amount" readonly class="goldSliderText">
+            </p>
+            <br>
+            <div id="slider-range"></div> 
+            <br><br>
+            
+            <button id="Search">Search</button>
+
+            
+
+        </div>
+    
+    </div>
+ 
+    <div id="Placeholder"></div>
+    <script>
+
+        var data = { 
+    
+        "shoes": [
+            {
+                "id":"shoe1-Pure-Tone",
+                "name":"Pure Tone",
+                "gender":"Women",
+                "style":"Flats",
+                "size":[4,5,6,7],
+                "price":75,
+                "colour":["Red","Black"],
+                "description":"Worn as slip-ons or mules, these elegant women's shoes are crafted from supersoft red suede and feature a heel piece that folds down to offer wardrobe versatility. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+                "picture":"shoes/shoe1.jpg",
+                    "url":"shoe-pages/Pure-Tone/Pure Tone.html",
+            },
+            {
+                "id":"shoe2-Orinoco-Lace",
+                "name":"Orinoco 2 Lace",
+                "gender":"Women",
+                "style":"Boots",
+                "size":[5,6,7],
+                "price":89,
+                "colour":["Brown","Black"],
+                "description":"Refreshing our bestselling Orinoco profile, a lace-up ankle boot that stays all day wearable. The premium dark olive leather upper stays classic and crafted while the cleated sole with 3cm heel feels durable and adds grip. Perfect to step into the season with casual style.",
+                "picture":"shoes/shoe2.jpg",
+                "url":"shoe-pages/Pure-Tone/Orinoco 2 Lace.html",
+            },
+            {
+                "id":"shoe3-Nature-Three",
+                "name":"Nature Three",
+                "gender":"Men",
+                "style":"Trouser Shoes",
+                "size":[7,8,9,10],
+                "price":90,
+                "colour":"Light Brown",
+                "description":"This classic silhouette comes right up to date with state-of-the-art Active Air underfoot cushioning. The last word in comfort, Nature Three has rich sand nubuck and super-soft sheepskin lining on a rubber sole that adds grip and durability.",
+                "picture":"shoes/shoe3.jpg",
+                "url":"shoe-pages/Pure-Tone/Nature Three.html",
+            },
+            {
+                "id":"shoe4-Pilton-Mule",
+                "name":"Pilton Mule",
+                "gender":"Men",
+                "style":"Slippers",
+                "size":[3,4,5,6,7,8],
+                "price":59,
+                "colour":"Rose",
+                "description":"A padded upper and adjustable toggle give on-trend slipper Pilton Mule a modern indoor/outdoor aesthetic. The rose-hued nylon upper teams with a fluffy lining and durable crepe-effect rubber sole for feel-good warmth and great grip ideal for confident and cosy steps around the house or when popping out.",
+                "picture":"shoes/shoe4.jpg",
+                "url":"shoe-pages/Pure-Tone/Pilton Mule.html",
+            },
+            {
+                "id":"shoe5-Kaylin-cara",
+                "name":"Kaylin Cara",
+                "gender":"Women",
+                "style":"Heels",
+                "size":[3,4,5,6,7],
+                "price":29,
+                "colour":["Red","black"],
+                "description":"Chic and contemporary, Kaylin Cara 2 is a versatile court shoe that puts comfort and style in the spotlight. The almond toe, 8cm block heel, and premium wine suede finish embody modern elegance while Cushion Plus™ technology offers targeted cushioning that reduces strain on the ball of the foot. Ideal for work or occasionwear.",
+                "picture":"shoes/shoe5.jpg",
+                "url":"shoe-pages/Pure-Tone/Kaylin Cara.html",
+            },
+            {
+                "id":"shoe6-deva-mae",
+                "name":"Deva Mae",
+                "gender":"Women",
+                "style":"Sandals",
+                "size":[6,7],
+                "price":55,
+                "colour":"Silver",
+                "description":"This elegant block heel bares plenty of skin, and features an elegant buckle strap that adds extra visual appeal while allowing for a more comfortable fit. Layers of Cushion Soft padding with an OrthoLite footbed absorb impact to promote comfort underfoot. Its chunky heel and rubber outsole balance height with walkability. A natural fit for formal dresses and special occasions.",
+                "picture":"shoes/shoe6.jpg",
+                "url":"shoe-pages/Pure-Tone/Deva Mae.html",
+            },
+            {
+                "id":"shoe7-sidton-lace",
+                "name":"Sidton Lace",
+                "gender":"Men",
+                "style":"Derby Shoe",
+                "size":[6,7,8],
+                "price":49,
+                "colour":"black",
+                "description":"A classic formal slip on, Sidton Lace has an elegant, timeless aesthetic in smooth black leather. Its slimline black sole and classic lace-up fastening gives a sleek, versatile silhouette. The ideal style for workwear or weekend occasions.",
+                "picture":"shoes/shoe7.jpg",
+                "url":"shoe-pages/Pure-Tone/Sidton Lace.html",
+            }
+        ]}
+    
+        </script>
+</body>
+</html>
